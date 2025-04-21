@@ -17,4 +17,4 @@ Generally user flow will be as shown in the wireframe, where users open up to th
 page, which shows their current spending for a certain pre-set timeframe. Swipe right for
 viewing all purchases they've made by recency
 
-For more, view brainstorming.md
+For more, view brainstorm.md
