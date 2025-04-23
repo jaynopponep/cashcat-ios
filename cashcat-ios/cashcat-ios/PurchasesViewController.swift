@@ -3,7 +3,7 @@ import UIKit
 class PurchasesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private var tableView: UITableView!
-    private var purchases: [(title: String, amount: String)] = [
+    private var purchases: [(name: String, amount: String)] = [
         ("Gas", "$29.99"),
         ("Groceries", "$16.49"),
         ("Disney+ Subscription", "$10.99")

@@ -28,6 +28,24 @@ class HomeViewController: UIViewController {
         addPurchaseButton.frame = CGRect(x: 0, y: 0, width: 150, height: 40)
         addPurchaseButton.setTitle("Add Purchase", for: .normal)
         addPurchaseButton.center = CGPoint(x: view.center.x, y: view.frame.height - 100)
+        addPurchaseButton.addTarget(self, action: #selector(addPurchaseButtonTapped), for: .touchUpInside)
         view.addSubview(addPurchaseButton)
+    }
+    @objc private func addPurchaseButtonTapped() {
+        let addPurchaseVC = AddPurchaseViewController()
+        let navController = UINavigationController(rootViewController: addPurchaseVC)
+        present(navController, animated: true)
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let titleLabel = view.subviews.first(where: { ($0 as? UILabel)?.text == "Cash Cat" }) as? UILabel {
+            titleLabel.frame = CGRect(
+                x: 0,
+                y: view.safeAreaInsets.top + 10,
+                width: view.frame.width,
+                height: 30
+            )
+        }
     }
 }
